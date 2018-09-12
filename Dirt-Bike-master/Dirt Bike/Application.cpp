@@ -72,7 +72,13 @@ bool Application::Init()
 void Application::PrepareUpdate()
 {
 	dt = (float)ms_timer.Read() / 1000.0f;
+	frames = 1 / dt;
 	ms_timer.Start();
+
+	frames_vec.push_back(frames);
+	dt_vec.push_back(dt*1000);
+
+	LOG("frames %f", frames);
 }
 
 // ---------------------------------------------

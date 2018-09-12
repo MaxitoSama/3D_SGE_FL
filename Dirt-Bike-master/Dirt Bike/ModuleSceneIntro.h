@@ -43,6 +43,9 @@ public:
 
 public:
 
+	char title[128];
+	int fps;
+
 	update_status Status;
 	
 };

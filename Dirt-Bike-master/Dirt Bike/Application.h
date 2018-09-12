@@ -13,6 +13,8 @@
 #include "ModulePhysics3D.h"
 #include "ModulePlayer.h"
 
+#include <vector>
+
 class Application
 {
 public:
@@ -25,10 +27,16 @@ public:
 	ModulePhysics3D* physics;
 	ModulePlayer* player;
 
+	float	dt;
+	float	frames;
+	std::vector<float> frames_vec;
+	std::vector<float> dt_vec;
+
 private:
 
 	Timer	ms_timer;
-	float	dt;
+	Timer	frame_timer;
+	
 	p2List<Module*> list_modules;
 
 public:

@@ -209,12 +209,6 @@ update_status ModulePlayer::Update(float dt)
 	Player_camera();
 
 	
-	
-	char title[128];
-	sprintf_s(title, "%.1f Km/h Lap: %u Time: %.3f", vehicle->GetKmh(), laps, (float)race_time.Read()/1000);
-	App->window->SetTitle(title);
-
-	
 	LOG("x=%.1f", posx);
 	LOG("z=%.1f", posz);
 
